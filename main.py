@@ -22,7 +22,7 @@ player_paddle.midright = (screen_width, screen_height/2)
 ball_speed_x = 6
 ball_speed_y = 6
 player_speed = 0
-computer_speed = 6
+computer_speed = 5
 
 computer_points, player_points = 0, 0
 score_font = pygame.font.Font(None, 100)
@@ -58,15 +58,15 @@ def animate_computer():
     computer_paddle.y += computer_speed
 
     if ball.centery <= computer_paddle.centery:
-        computer_speed = -6
+        computer_speed = -5
     if ball.centery >= computer_paddle.centery:
-        computer_speed = 6
+        computer_speed = 5
 
     if computer_paddle.top <= 0:
         computer_paddle.top = 0
     if computer_paddle.bottom >= screen_height:
         computer_paddle.bottom = screen_height
-
+        
 def animate_ball():
     global ball_speed_x, ball_speed_y
     ball.x += ball_speed_x
@@ -122,5 +122,8 @@ while True:
     # Update the display
     pygame.display.update()
     clock.tick(60)
+
+
+
 
 
