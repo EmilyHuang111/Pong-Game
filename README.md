@@ -1,4 +1,5 @@
 # Pong Game
+![Demo Video](demo.gif)
 
 This project is a classic Pong game implemented using Python's **Pygame** library. The game features a player-controlled paddle and a computer-controlled paddle that move vertically to hit the ball. The first player to reach the ball wins a point. The game is displayed on a window with a score counter for both the player and the computer.
 
